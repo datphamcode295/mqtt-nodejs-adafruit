@@ -11,10 +11,10 @@ For more documentation on the use of the Javascript MQTT.js client, see the [Jav
   ```bash
   npm install
   // or use yarn
-  yarn
+  yarn install
   ```
 
-* Start
+* Start :
     Replace your username and key in the code
 
     ```bash

@@ -8,12 +8,12 @@ const client = mqtt.connect(connectUrl, {
   clean: true,
   connectTimeout: 4000,
   username: 'vandat2000', //username in adafruit io key (My Key)
-  password: 'aio_TJOF63EcVjp4oaWPmgtJisUAYMaq',//active key in adafruit io key (My Key)
+  password: 'aio_kRQP27FV3pWmfUZEXb2Ukr3c1p5R',//active key in adafruit io key (My Key)
   reconnectPeriod: 1000,
 })
 const topic = 'vandat2000/feeds/temp'
 
-    client.publish(topic, '50', { qos: 0, retain: false }, (error) => {
+    client.publish(topic, '70', { qos: 0, retain: false }, (error) => {
       if (error) {
         console.error(error)
       }
