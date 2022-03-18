@@ -7,11 +7,11 @@ const client = mqtt.connect(connectUrl, {
   clientID,
   clean: true,
   connectTimeout: 4000,
-  username: 'vandat2000', //username in adafruit io key (My Key)
-  password: 'aio_kRQP27FV3pWmfUZEXb2Ukr3c1p5R',//active key in adafruit io key (My Key)
+  username: 'your username', //username in adafruit io key (My Key)
+  password: 'your activekey',//active key in adafruit io key (My Key)
   reconnectPeriod: 1000,
 })
-const topic = 'vandat2000/feeds/temp'
+const topic = 'example/feeds/temp'//fill your topic link
 
     client.publish(topic, '70', { qos: 0, retain: false }, (error) => {
       if (error) {
