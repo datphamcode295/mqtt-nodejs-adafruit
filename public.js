@@ -1,4 +1,3 @@
-//const client = require("./index")
 const mqtt = require('mqtt')
 
 const connectUrl = `https://io.adafruit.com:1883`
@@ -11,17 +10,29 @@ const client = mqtt.connect(connectUrl, {
   password: 'your activekey',//active key in adafruit io key (My Key)
   reconnectPeriod: 1000,
 })
-const topic = 'example/feeds/temp'//fill your topic link
 
-    client.publish(topic, '70', { qos: 0, retain: false }, (error) => {
-      if (error) {
-        console.error(error)
-      }
-      else{
-        client.end()
 
-      }
-    })
+const topic = 'vandat2000/feeds/temp'
+
+const callback = ()=>{
+  var val = Math.floor(Math.random() * 100);
+  client.publish(topic, val.toString(), { qos: 0, retain: false }, (error) => {
+    if (error) {
+      console.error(error)
+    }
+    else{
+      console.log("Done: ", val)
+
+    }
+  })
+}
+
+setInterval(callback, 3000);
+
+
+
+
+
 
 
 
