@@ -18,9 +18,9 @@ For more documentation on the use of the Javascript MQTT.js client, see the [Jav
     Replace your username and key in the code
 
     ```bash
-    npm index.js
+    node index.js
     //to run subscribe
-    npm public.js
+    node public.js
     //to public data to the topic
     ```
 
